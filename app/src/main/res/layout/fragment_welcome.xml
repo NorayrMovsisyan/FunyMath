@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:text="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentetion.mathgame.WelcomeFragment"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        text:text = "Welcome"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
