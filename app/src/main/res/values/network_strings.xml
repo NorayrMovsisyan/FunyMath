@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="net_error_default">Извините, произошла ошибка.\nМы уже работаем над ее исправлением.</string>
+    <string name="net_error_no_connection">Отсутствует\nинтернет-соединение.</string>
+    <string name="net_error_no_connection_ext">Отсутствует интернет-соединение. Проверьте подключение к Wi-Fi или сотовой сети.</string>
+    <string name="net_error_http_invalid_response">Ошибка в данных.</string>
+    <string name="net_error_http_401">Требуется авторизация.</string>
+    <string name="net_error_http_403">У вас отсутвуют права доступа к данному ресурсу.</string>
+    <string name="net_error_http_404">Извините, произошла ошибка.</string>
+    <string name="net_error_http_503">Проводятся работы по обновлению системы.</string>
+    <string name="net_empty"/>
+</resources>
