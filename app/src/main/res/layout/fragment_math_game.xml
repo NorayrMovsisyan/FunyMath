@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentetion.mathgame.mathgame.MathGameFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timer"
+        style="@style/TaxtViewBase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="00:00"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sum"
+        style="@style/TaxtView"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:background="@drawable/bg_oval"
+        android:gravity="center"
+        android:text="10"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/leftDig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/leftDig"
+        style="@style/TaxtView"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/bg_rectangle"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/option3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/rightDig"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sum"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rightDig"
+        style="@style/TaxtView"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_rectangle"
+        android:gravity="center"
+        android:text="?"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/leftDig"
+        app:layout_constraintTop_toTopOf="@+id/leftDig" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:text="Correct answers "
+        app:layout_constraintBottom_toTopOf="@+id/progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:max="100"
+        android:secondaryProgressTint="@color/blue"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/option1"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/option1"
+        style="@style/TaxtView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/option2"
+        app:layout_constraintEnd_toStartOf="@+id/option3"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/option2"
+        style="@style/TaxtView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/option4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/option3"
+        style="@style/TaxtView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:text="3"
+        app:layout_constraintBottom_toBottomOf="@+id/option1"
+        app:layout_constraintEnd_toStartOf="@+id/option5"
+        app:layout_constraintStart_toEndOf="@+id/option1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/option4"
+        style="@style/TaxtView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/green"
+        android:gravity="center"
+        android:text="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/option6"
+        app:layout_constraintStart_toEndOf="@+id/option2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/option5"
+        style="@style/TaxtView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/purple"
+        android:gravity="center"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/option6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/option3" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/option6"
+        style="@style/TaxtView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/sky"
+        android:gravity="center"
+        android:text="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/option4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

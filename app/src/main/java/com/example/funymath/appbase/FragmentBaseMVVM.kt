@@ -1,11 +1,10 @@
-package droid.telemed.mts.ru.telemed.refactor.appbase
+package com.example.funymath.appbase
 
 import android.os.*
 import android.util.Log
 import android.view.*
 import androidx.navigation.*
 import androidx.viewbinding.*
-import com.example.funymath.appbase.FragmentBase
 import com.example.funymath.appbase.viewmodel.BaseViewModel
 
 abstract class FragmentBaseMVVM<ViewModel : BaseViewModel, ViewBind : ViewBinding> :

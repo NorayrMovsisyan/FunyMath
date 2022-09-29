@@ -13,34 +13,34 @@ class MathRepositoryImpl : MathRepository {
         return when (level) {
             Level.Test -> {
                 GameSettings(
-                    5,
-                    5,
+                    10,
+                    3,
                     50,
-                    120
+                    8
                 )
             }
             Level.Easy -> {
                 GameSettings(
                     10,
-                    5,
+                    10,
                     70,
-                    120
+                    60
                 )
             }
             Level.Normal -> {
                 GameSettings(
-                    10,
-                    10,
-                    70,
-                    90
+                    20,
+                    20,
+                    80,
+                    40
                 )
             }
             Level.Hard -> {
                 GameSettings(
-                    10,
-                    10,
+                    30,
+                    30,
                     90,
-                    60
+                    40
                 )
             }
         }
@@ -48,20 +48,22 @@ class MathRepositoryImpl : MathRepository {
 
     override fun generateQuestion(maxSumValue: Int, countOfOption: Int): Question {
         val sum = Random.nextInt(MIN_SUM_VALUE, maxSumValue + 1)
-        val visibleNumber = Random.nextInt(MIN_SUM_VALUE, sum)
-        val options = HashSet<Int>()
-        val rightAnswer = sum - visibleNumber
-        options.add(rightAnswer)
-        val from = max(rightAnswer - countOfOption, MIN_ANSWER_VALUE)
-        val to = min(maxSumValue, rightAnswer + countOfOption)
-        while (options.size < countOfOption) {
-            options.add(Random.nextInt(from, to))
-        }
-        return Question(sum, visibleNumber, options.toList())
+        return if (sum > MIN_SUM_VALUE) {
+            val visibleNumber = Random.nextInt(MIN_SUM_VALUE, sum)
+            val options = HashSet<Int>()
+            val rightAnswer = sum - visibleNumber
+            options.add(rightAnswer)
+            val from = max(rightAnswer - countOfOption, MIN_ANSWER_VALUE)
+            val to = min(maxSumValue, rightAnswer + countOfOption)
+            while (options.size < countOfOption) {
+                options.add(Random.nextInt(from, to))
+            }
+            Question(sum, visibleNumber, options.toList())
+        } else Question(0, 0, emptyList())
     }
 
     private companion object {
-        private const val MIN_SUM_VALUE = 2
+        private const val MIN_SUM_VALUE = 1
         private const val MIN_ANSWER_VALUE = 1
     }
 }

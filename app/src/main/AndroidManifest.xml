@@ -4,6 +4,7 @@
     package="com.example.funymath">
 
     <application
+        android:name=".presentetion.FunyMathApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"

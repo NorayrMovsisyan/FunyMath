@@ -13,4 +13,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="TaxtViewBase" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/dp_32</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="TaxtView" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/dp_32</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>
